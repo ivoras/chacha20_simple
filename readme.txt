@@ -3,7 +3,10 @@ It has been optimized a bit by using native 32-bit ops on little endian systems
 and XOR-ing 32-bit chunks instead of byte by byte. This increases its performance
 from 27.2 MB/s to 33 MB/s on Raspberry Pi 2.
 
-Intrestingly enough, this code works directly as an Arduino library.
+Intrestingly enough, this code works directly as an Arduino library (if just the
+chacha20_simple.c and chacha20_simple.h are placed in their own folder in the
+Arduino "libraries" folder).
+
 Some performance numbers are 19 KiB/s on an Arduino Micro ATmega32U4 (should be the
 same performance on ATmega328), and 1.6 MiB/s on a "Maple Mini" STM32F103 72 MHz.
 This is reasonable because ChaCha20 is really a 32-bit algorithm.
