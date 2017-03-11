@@ -1,3 +1,11 @@
+This is a fork of the chacha20 implementation referenced below.
+It has been optimized a bit by using native 32-bit ops on little endian systems
+and XOR-ing 32-bit chunks instead of byte by byte. This increases its performance
+from 27.2 MB/s to 33 MB/s on Raspberry Pi 2.
+
+Original readme file follows:
+-----------------------------
+
 Homepage: http://chacha20.insanecoding.org/
 Articles: http://insanecoding.blogspot.com/
 
